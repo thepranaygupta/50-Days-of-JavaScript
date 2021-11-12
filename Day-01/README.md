@@ -14,3 +14,6 @@ function randomNumberGeneratorInRange(min, max) {
 
 console.log(`My random number: ${randomNumberGeneratorInRange(5, 100)}`)
 ```
+
+[Resource-1](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random)
+[Resource-2](https://stackoverflow.com/questions/1527803/generating-random-whole-numbers-in-javascript-in-a-specific-range)
