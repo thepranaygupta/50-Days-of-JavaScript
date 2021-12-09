@@ -2,15 +2,15 @@ const time = '12:10AM';
 
 function convertTo24HrsFormat(time) {
     // write your solution here
-    if(time12h.length == 7){
-        var time = time12h.slice(0,5)
-        var modifier = time12h.slice(-2);
+    if(time.length == 7){
+        var newTime = time.slice(0,5)
+        var modifier = time.slice(-2);
     }else{
-        var time = time12h.slice(0,4)
-        var modifier = time12h.slice(-2);
+        var newTime = time.slice(0,4)
+        var modifier = time.slice(-2);
     }
 
-    let [hours, minutes] = time.split(':');
+    let [hours, minutes] = newTime.split(':');
     if(hours.length == 1) hours = '0'+hours
     if(minutes.length == 1) minutes = '0'+minutes
   
