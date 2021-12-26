@@ -1,14 +1,18 @@
 function wave(str) {
   // Your Code goes below
-  let newStr = ''
-  let ans = [];
-  for(let i=0;i<str.length;i++){
-    if(str[i] === ' ') continue;
-    newStr += str.slice(0,i)+str[i].toUpperCase()+str.slice(i+1)
-    ans.push(newStr)
-    newStr = ''
+  
+  let result = [];
+  for(let i = 0; i < str.length; i++) {
+      let strChar = str.toLowerCase().split("");
+      if(strChar[i] === ' ') {
+      	continue;
+      } else {
+      	strChar[i] = strChar[i].toUpperCase();
+        result.push(strChar.join(""));
+      }
+        
   }
-  return ans
+  return result;
 }
 
 console.log(wave("two words"));

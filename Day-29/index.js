@@ -1,16 +1,22 @@
 function accum(s) {
   // your code goes below
-  s = s.split('')
-  let newStr = ''
-  s.map((ele,index) => {
-    for(let i=0;i<=index;i++){
-      if(i==0)
-      newStr += ele.toUpperCase()
-      else
-      newStr += ele.toLowerCase()
-    }
-    newStr += '-'
-  })
-  return newStr.slice(0,newStr.length-1)
+  let k, res = '';
+  strChar = s.toLowerCase().split('');
+  for(let i=0; i<strChar.length; i++) {
+      k = i+1;
+      let temp = '';
+      while(k>0) {
+        temp += strChar[i];
+        k--;
+      }
+      temp = capitalFirstLetter(temp);
+      res += `${temp}-`
+  }
+
+  return res.slice(0, -1);
 }
-accum("ZpglnRxqenU")
+
+
+function capitalFirstLetter(str) {
+    return str.charAt(0).toUpperCase() + str.slice(1);
+}

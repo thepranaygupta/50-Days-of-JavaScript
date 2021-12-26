@@ -7,10 +7,12 @@ const array = [
 const filterField = "money"
 
 function removeArrayElement(filterField) {
-    let newArr = array.filter((item) => {
-        return item.field != filterField
-    })
-    return newArr;
+    // write your solution here
+    var arr = array.filter(function (obj) {
+        return obj.field !== filterField;
+    });
+
+    return arr;
 }
 
 console.log(`filtered array: ${removeArrayElement(filterField)}`)

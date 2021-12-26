@@ -1,14 +1,18 @@
-function toWeirdCase(string) {
-    // Your code goes here
-    let newStr = '';
-    for(let i=0;i<string.length;i++){
-        if(i%2==0) newStr += string[i].toUpperCase()
-        else newStr += string[i].toLowerCase()
-    }
-    return newStr
+function toWeirdCase(str) {
+  // Your code goes here
+  str = str.toLowerCase();
+  let strCharacters = str.split("");
+  let result = '';
+  for(let i = 0; i < strCharacters.length; i++) {
+      if(i%2 === 0) {
+          result += strCharacters[i].toUpperCase();
+      } else {
+          result += strCharacters[i];
+      }
   }
-  
-  console.log(
-    `The weird case of ${"A test case"} is ${toWeirdCase("A test case")}`
-  );
-  
+  return result;
+}
+
+console.log(
+  `The weird case of ${"A test case"} is ${toWeirdCase("A test case")}`
+);
